@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Ratio Guess</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+        <header class="flex flex-column">
+            <div class="flex flex-wrap">
+                <div class="flex flex-column box" id="inputContainer">
+                    <h4>Input</h4>
+                    <div class="flex">
+                        <div class="flex align-items-center">
+                            <div class="flex flex-column">
+                                <input id="width" type="text" placeholder="width" class="origWidth" value="16"/>
+                                <input id="height" type="text" placeholder="height" class="origHeight" value="9"/>
+                            </div>
+                            <div class="eq">=</div>
+                            <div class="flex flex-column">
+                                <span id="ggtWidth" class="field">width</span>
+                                <span id="ggtHeight" class="border-top field">height</span>
+                            </div>
+                            <div class="eq">=</div>
+                            <div id="ratio"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-column box"  id="selectionContainer">
+                    <h4>Selection</h4>
+                    <div class="flex">
+                        <div class="flex align-items-center">
+                            <div class="flex flex-column">
+                                <div id="selectionRatio"></div>
+                                <div class="diff">(<span id="selectionRatioDiff"></span>)</div>
+                            </div>
+                            <div class="eq">=</div>
+                            <div class="flex flex-column">
+                                <span id="selectionWidth" class="field"></span>
+                                <span id="selectionHeight" class="border-top field"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-column box" id="resultContainer">
+                    <div class="flex">
+                        <h4>Result</h4>
+                        <input type="checkbox" value="1" id="roundResult" checked="checked"/>
+                        <label for="roundResult"> rounded</label>
+                    </div>
+                    <div class="flex">
+                        <div class="flex align-items-center">
+                            <div class="flex flex-column">
+                                <span id="inputWidth" class="field origWidth"></span>
+                                <div class="border-top field resRnd"><span id="resultHeightRnd"></span> <div class="diff">(<span id="resultHeightRndDiff"></span>)</div></div>
+                                <div class="border-top field res"><span id="resultHeight"></span> <div class="diff">(<span id="resultHeightDiff"></span>)</div></div>
+                            </div>
+                            <div class="eq">=</div>
+                            <div class="flex flex-column">
+                                <div class="field resRnd"><span id="resultWidthRnd"></span> <div class="diff">(<span id="resultWidthRndDiff"></span>)</div></div>
+                                <div class="field res"><span id="resultWidth"></span> <div class="diff">(<span id="resultWidthDiff"></span>)</div></div>
+                                <span id="inputHeight" class="border-top field origHeight"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex heat-map-config">
+                <div class="flex flex-wrap box align-items-center">
+                    <div><h4>Heatmap settings</h4></div>
+                    <div class="flex align-items-center input">
+                        <div class="flex align-items-center"><label for="heatMapX">x</label><input id="heatMapX" type="text" placeholder="x start" value="1" /></div>
+                        <div class="flex align-items-center"><label for="heatMapY">y</label><input id="heatMapY" type="text" placeholder="y start" value="1" /></div>
+                    </div>
+                    <div id="selectStartContainer">
+                        <a id="setStart">set start from current selection</a>
+                    </div>
+                    <div>
+                        <div class="flex align-items-center"><label for="heatMapMaxSize">max size</label><input id="heatMapMaxSize" type="text" placeholder="scale" value="50"/></div>
+                    </div>
+                    <div>
+                        <div class="flex align-items-center"><label for="heatMapScale">resolution</label><input id="heatMapScale" type="text" placeholder="scale" value="0.9"/></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div id="heatMapContainer">
+                <canvas id="heatMap"></canvas>
+                <div id="selectionRectangle"></div> 
+                <div id="overlay">
+                    <div class="overlay-content">
+                        <div id="overlayRectangle"></div> 
+                        <div id="overlayInfo">
+                            <div class="dimensions">
+                                <span id="overlayWidth"></span>
+                                <span> / </span>
+                                <span id="overlayHeight"></span>
+                            </div>
+                            <span>=</span><br>
+                            <span id="overlayRatio"></span><br>
+                            <!-- <span id="overlayRatioDiff" class="diff"></span> -->
+                            <!-- <br><span id="overlayHeat"></span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

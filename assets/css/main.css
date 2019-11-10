@@ -1,0 +1,175 @@
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4e4e4e;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 1rem;
+    background-color: #fff;
+    font-size: .8rem;
+    z-index:1000;
+}
+header > div > div {
+    padding: 1rem;
+    text-align: center;
+}
+h4 {
+    font-size: .8rem;
+    margin: 0 0 1rem 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#roundResult {
+    padding: 0;
+    margin-left: 2rem;
+    margin-right: .3rem; 
+}
+.box {
+    box-shadow: 0 0 .02rem .02rem rgba(0, 0, 0, 0.6);
+    margin: .3rem;
+}
+label {
+    font-style: italic;
+}
+
+
+.heat-map-config > .box {
+    padding: .5rem;
+}
+.heat-map-config > div > div {
+    padding: .5rem;
+}
+.heat-map-config .input {
+    padding: 0;
+    margin: .5rem;
+}
+.heat-map-config input {
+    margin-right: .5rem;
+    max-width: 2rem;
+}
+.heat-map-config label {
+    padding-right: .3rem;
+}
+
+.heat-map-config h4 {
+    margin: 0 .5rem 0 0;
+}
+#heatMapScale {
+    max-width: 3rem;
+}
+canvas {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#selectionContainer,
+#resultContainer,
+.res {
+    display: none;
+}
+
+.diff {
+    color: #9c2424;
+    display: inline;
+}
+.origWidth {
+    background-color: rgba(255, 166, 0, 0.6);
+}
+.origHeight {
+    background-color: rgba(0, 217, 255, 0.6);
+}
+#heatMapContainer {
+    position: relative;
+    padding: 0 1rem 1rem;
+    display: none;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    display: none;
+    pointer-events: none;
+}
+.overlay-content {
+    position: relative;
+}
+#overlayInfo .dimensions {
+    white-space: nowrap;
+}
+#overlayInfo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(255,255,255,0.7) ;
+    padding: .5rem;
+    font-size: .8rem;
+    box-shadow: 0 0 .02rem .02rem rgba(0, 0, 0, 0.6);
+}
+#overlayRectangle {
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+#selectionRectangle {
+    border: 1px solid #ff0000;
+    box-sizing: border-box;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    pointer-events: none;
+    opacity: .4;
+}
+#selectStartContainer {
+    display: none;
+}
+a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+input {
+    font-size: .9rem;
+    border: 1px dotted #333333;
+    max-width: 3rem;
+    text-align: center;
+}
+#width {
+    border-bottom: 0;
+}
+
+.border-top {
+    border-top: 1px solid #333333;
+}
+
+.field {
+    padding: .1rem .5rem;
+}
+.eq {
+    padding: 0 .5rem;
+}
+
+
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.align-items-center {
+    align-items: center;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
