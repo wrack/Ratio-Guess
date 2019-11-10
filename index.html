@@ -14,8 +14,8 @@
                     <div class="flex">
                         <div class="flex align-items-center">
                             <div class="flex flex-column">
-                                <input id="width" type="text" placeholder="width" class="origWidth" value="16"/>
-                                <input id="height" type="text" placeholder="height" class="origHeight" value="9"/>
+                                <input id="width" type="number" placeholder="width" class="origWidth" value="16"/>
+                                <input id="height" type="number" placeholder="height" class="origHeight" value="9"/>
                             </div>
                             <div class="eq">=</div>
                             <div class="flex flex-column">
@@ -72,17 +72,17 @@
                 <div class="flex flex-wrap box align-items-center">
                     <div><h4>Heatmap settings</h4></div>
                     <div class="flex align-items-center input">
-                        <div class="flex align-items-center"><label for="heatMapX">x</label><input id="heatMapX" type="text" placeholder="x start" value="1" /></div>
-                        <div class="flex align-items-center"><label for="heatMapY">y</label><input id="heatMapY" type="text" placeholder="y start" value="1" /></div>
+                        <div class="flex align-items-center"><label for="heatMapX">x</label><input id="heatMapX" type="number" placeholder="x start" value="1" /></div>
+                        <div class="flex align-items-center"><label for="heatMapY">y</label><input id="heatMapY" type="number" placeholder="y start" value="1" /></div>
                     </div>
                     <div id="selectStartContainer">
                         <a id="setStart">set start from current selection</a>
                     </div>
                     <div>
-                        <div class="flex align-items-center"><label for="heatMapMaxSize">max size</label><input id="heatMapMaxSize" type="text" placeholder="scale" value="50"/></div>
+                        <div class="flex align-items-center"><label for="heatMapMaxSize">max size</label><input id="heatMapMaxSize" type="number" placeholder="scale" value="50"/></div>
                     </div>
                     <div>
-                        <div class="flex align-items-center"><label for="heatMapScale">resolution</label><input id="heatMapScale" type="text" placeholder="scale" value="0.9"/></div>
+                        <div class="flex align-items-center"><label for="heatMapScale">resolution</label><input id="heatMapScale" type="number" placeholder="scale" value="0.9"/></div>
                     </div>
                 </div>
             </div>
