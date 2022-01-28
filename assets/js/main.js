@@ -68,6 +68,14 @@ class RatioGuess {
     }
 }
 
+let searchParams = new URLSearchParams(window.location.search);
+if (searchParams.has('width')) {
+    widthInput.value = parseInt(searchParams.get('width'));
+}
+if (searchParams.has('height')) {
+    heightInput.value = parseInt(searchParams.get('height'));
+}
+
 let guess = new RatioGuess(widthInput.value, heightInput.value);
 let refreshing = false;
 
