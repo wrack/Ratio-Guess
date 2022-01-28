@@ -7,9 +7,57 @@ body {
     margin: 0;
     padding: 0;
 }
+@keyframes logoFrames {
+    0%   { transform: rotate(-42deg); }
+    30%   { transform: rotate(-49deg); }
+    54%   { transform: rotate(-44deg); }
+    77%   { transform: rotate(-47deg); }
+    100%   { transform: rotate(-42deg); }
+}
+@keyframes nameFrames {
+    0%   { transform: rotate(33deg); } 
+    30%   { transform: rotate(20deg); }
+    48%   { transform: rotate(23deg); }
+    77%   { transform: rotate(-10deg); }
+    100%   { transform: rotate(-16deg); }
+}
+#logo {
+    position: fixed;
+    z-index: -1;
+    bottom: -40px;
+    right: -90px;
+    width: 120px;
+    height: 120px;
+    transform: rotate(-45deg);
+    animation-name: logoFrames;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    transform-origin: center bottom;
+    animation-direction: alternate;
+}
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+#logo::after {
+    content: "Eric Depta";
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    line-height: 12px;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    text-align: center;
+    font-weight: 800;
+    animation-name: nameFrames;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    transform-origin: center bottom;
+    animation-direction: alternate;
+}
 header {
     padding: 1rem;
-    background-color: #fff;
     font-size: .8rem;
     z-index:1000;
 }
@@ -32,6 +80,7 @@ h4 {
 .box {
     box-shadow: 0 0 .02rem .02rem rgba(0, 0, 0, 0.6);
     margin: .3rem;
+    background-color: #fff;
 }
 label {
     font-style: italic;
